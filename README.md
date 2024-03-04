@@ -1,5 +1,5 @@
 # dogeMap-minter
-A bot to mint dogemaps DRC20 using either dogecore or a publicRPC node. This bot uses a lightly edited script doginals.js (see license infos to view original creator). The script is edited to automatically convert text to hex on input when minting, and to not relaunch previous failed transactions automatically
+A bot to mint dogemaps DRC20 using either dogecore or a publicRPC node. This bot uses a lightly edited script doginals.js (see license infos to view original creator). The script is edited to automatically convert text to hex on input when minting, and to not relaunch previous failed transactions automatically. Made for windows user, just edit bat files if needed for linux.
 
 
 
@@ -11,12 +11,20 @@ git clone https://github.com/zorglob21/dogeMap-minter
 then
 
 ```
-npm i.
+npm i
 ```
 
 Set the correct settings in .env and in localhost_bot.js set correct rpc parameters, same for publicRpc_bot.js set the correct http endpoint.
 
 follow doginals instructions to create a new wallet and fund it.
+
+
+Those scripts check for the current block number, then if the number change they execute the bat file and subsequent console commands that will trigger the minting using doginal.js. 
+
+For localhost_bot :
+
+You can pick either the current broadcasted number or the number +2, +3 etc to get a better success rate depending on fee, settings. It's challenging to the right block number since we have no control over what block the transaction will be mined in we can only make a guess. An other solutions is to broadcast several transactions each block in order to maximize chances to get a block right.
+
 
 BE CAREFUL not to sync the wallet once the minting is started or use another wallet, as this creates issues due to pending transacations and double spending so the transactions won't be broadcasted anymore. This is due to the delay between the local ledger of utxos that is kept in wallet.json and the infos that are received from the public node used to sync the wallet.
 
@@ -24,14 +32,15 @@ Once you've set the correct settings, this is how these scripts work:
 
 use either localhost_bot.js with localDogecore instance or publicRpc_bot.js with distant public node endpoint.
 
-Those scripts check for the current block number, then if the number change they execute the bat file that will trigger the minting. 
-
-For localhost_bot :
-
-You can pick either the current broadcasted number or the number +2, +3 etc to get a better success rate depending on fee, settings. It's challenging to the right block number since we have no control over what block the transaction will be mined in we can only make a guess. An other solutions is to broadcast several transactions each block in order to maximize chances to get a block right.
 
 Good minting!
 
+
+
+
+
+
+**********************************************************************************************
 
 # Doginals
 
