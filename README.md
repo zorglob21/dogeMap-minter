@@ -6,8 +6,9 @@ A bot to mint dogemaps DRC20 using either dogecore or a publicRPC node. This bot
 To install : 
 
 ```
-git clone then 
+git clone https://github.com/zorglob21/dogeMap-minter 
 ```
+then
 
 ```
 npm i.
