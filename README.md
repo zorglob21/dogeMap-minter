@@ -23,10 +23,10 @@ Those scripts check for the current block number, then if the number change they
 
 For localhost_bot :
 
-You can pick either the current broadcasted number or the number +2, +3 etc to get a better success rate depending on fee, settings. It's challenging to the right block number since we have no control over what block the transaction will be mined in we can only make a guess. An other solutions is to broadcast several transactions each block in order to maximize chances to get a block right.
+You can pick either the current broadcasted number or the number +2, +3 etc to get a better success rate depending on fee, settings. It's challenging to the right block number since we have no control over what block the transaction will be mined in we can only make a guess. Another solutions is to broadcast several transactions each block in order to maximize chances to get a block right.
 
 
-BE CAREFUL not to sync the wallet once the minting is started or use another wallet, as this creates issues due to pending transacations and double spending so the transactions won't be broadcasted anymore. This is due to the delay between the local ledger of utxos that is kept in wallet.json and the infos that are received from the public node used to sync the wallet.
+BE CAREFUL not to sync the wallet once the minting is started or use another wallet, as this creates issues due to pending transactions and double spending so the transactions won't be broadcasted anymore. This is due to the delay between the local ledger of utxos that is kept in wallet.json and the infos that are received from the public node used to sync the wallet.
 
 Once you've set the correct settings, this is how these scripts work:
 
